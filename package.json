@@ -10,7 +10,15 @@
   "author": "IRONKAGE",
   "license": "ISC",
   "homepage": "https://github.com/IRONKAGE",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/IRONKAGE/NumberLoop-In-Bash-PowerShell-FromServer2Client.git"
+  },
+  "bugs": {
+    "url": "https://github.com/IRONKAGE/NumberLoop-In-Bash-PowerShell-FromServer2Client/issues"
+  },
   "dependencies": {
     "socket.io": "^2.3.0"
-  }
+  },
+  "devDependencies": {}
 }
