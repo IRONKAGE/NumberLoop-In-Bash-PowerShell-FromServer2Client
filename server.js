@@ -14,7 +14,7 @@ io.on("connection", (socket) => {
     console.info(`Клієнт приєднався [id=${socket.id}]`);
 
     socket.broadcast.emit("user", `Клієнт приєднався`)
-    socket.broadcast.emit("numberFromClient", serverNumber)
+    socket.broadcast.emit("numberFromServer", serverNumber)
 
     // clientNumber.set(socket, 1)
 
