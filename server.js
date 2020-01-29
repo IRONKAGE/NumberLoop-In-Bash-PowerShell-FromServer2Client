@@ -21,9 +21,18 @@ io.on("connection", (socket) => {
 
 // Генерація чисел на сервері (краще рішення)
 setInterval(() => {
-    console.log(`Число із сервера ` + serverNumber);
     serverNumber++
+    console.log(`Число із сервера ` + serverNumber);
     io.volatile.emit('numberFromServer', serverNumber)
 }, 1000);
+
+// Лишив для тесту продуктивності
+// setInterval(() => {
+//     do {
+//         serverNumber++;
+//         console.log(`Число із сервера ` + serverNumber);
+//         io.volatile.emit('numberFromServer', serverNumber)
+//     } while (serverNumber < 1);
+// }, 1000);
 
 server.listen(port);
