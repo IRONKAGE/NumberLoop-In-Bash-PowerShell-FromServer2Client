@@ -18,15 +18,21 @@ io.on("connection", (socket) => {
     });
 });
 
-
-// Генерація чисел на сервері (краще рішення)
+// Генерація чисел на сервері (нове рішення)
 setInterval(() => {
-    serverNumber++
-    console.log(`Число із сервера ` + serverNumber);
-    io.volatile.emit('numberFromServer', serverNumber)
+    serverNumber++;
+    console.log(`Число із сервера `,  serverNumber);
+    io.sockets.emit('numberFromServer', serverNumber);
 }, 1000);
 
-// Лишив для тесту продуктивності
+// Генерація чисел на сервері (краще рішення але застаріле)
+// setInterval(() => {
+//     serverNumber++;
+//     console.log(`Число із сервера `,  serverNumber);
+//     io.volatile.emit('numberFromServer', serverNumber);
+// }, 1000);
+
+// Генерація чисел на сервері (лишив для тесту продуктивності)
 // setInterval(() => {
 //     do {
 //         serverNumber++;
